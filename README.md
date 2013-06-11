@@ -1,2 +1,2 @@
-This Repository gives gives a simple Calender
+This Repository gives  a simple Calender
 
