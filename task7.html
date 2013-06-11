@@ -1,0 +1,99 @@
+<html>
+<head>
+<style>
+.total
+{
+	width:256px;
+	margin:auto;
+
+}
+.header
+{
+	background:black;
+	width: 254px;
+
+}
+.left
+{
+	width: 8px;
+	margin-right: 10px;
+	height: 13px;
+	margin-left: 59px;
+	margin-top: 3px;
+}
+.right
+{
+	width: 13px;
+	margin-right: 0px;
+	height: 11px;
+	margin-left: 5px;
+	margin-top: 3px;
+
+}
+td
+{
+	border:1px solid black;
+	height:30px;
+	width:30px;
+}
+.yearheader img
+{
+	width:13px;
+	height:10px;
+
+
+}
+.yearheader
+{
+	background:grey;
+
+}
+.dateleft
+{
+	margin-left: 74px;
+margin-top: 5px;
+margin-right: 0px;
+
+}
+table
+{
+	
+	text-align:center;
+	
+}
+</style>
+<script src="calender.js"></script>
+</head>
+
+<body onload=setCurrentDate();>
+<div class="total">
+<form name="calendar" onSubmit="return false;">
+		<div class="header">
+		<img src="images/arrow-left-hover.gif" onClick="previousMonth()" class="left">
+		<SELECT name="month" onChange="chooseDate()">
+			<OPTION>January</OPTION>
+			<OPTION>February</OPTION>
+			<OPTION>March</OPTION>
+			<OPTION>April</OPTION>
+			<OPTION>May</OPTION>
+			<OPTION>June</OPTION>
+			<OPTION>July</OPTION>
+			<OPTION>August</OPTION>
+			<OPTION>September</OPTION>
+			<OPTION>October</OPTION>
+			<OPTION>November</OPTION>
+			<OPTION>December</OPTION>
+		</SELECT>
+		<img src="images/arrow-right-hover.gif"  onClick="nextMonth()" class="right">
+		</div>
+		<div class="yearheader">
+		<img src="images/arrow-prev.png" onClick="previousYear()" class="dateleft">
+		<INPUT NAME="year" type=text SIZE=4 MAXLENGTH=4 onChange="chooseDate()">
+		<img src="images/arrow-next.png"  onClick="nextYear()" class="dateright">
+		</div>
+		<div id="displaycal"></div>
+
+</form>
+</div>
+</body>
+</html>
